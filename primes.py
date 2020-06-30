@@ -26,9 +26,9 @@ class bar:
        s.flush()
 
 
-y=bar(268656)
+y=bar(268667)
 final=[]
-for x in range(268656):
+for x in range(268667):
     y.adder()
     j=1
     f=[]
@@ -44,4 +44,13 @@ for x in range(268656):
           final.append(x)
           y.recounter()
 y.s.write('\n')
-print(final)
+k=0
+for c in final:
+  if k==5:
+   print('\t'+str(c),flush=True)
+   k=0
+  else:
+   print('\t'+str(c)+'\t',flush=True,end='|')
+   k+=1
+print('\n')
+y.s.close()
